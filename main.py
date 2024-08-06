@@ -130,23 +130,28 @@ x_frame.place(x=10, y=60)
 
 x = []
 
-
+x_lb = Entry(p_frame, bg="white", fg="black", font=("", 14), state="readonly")
+x_lb.place(x=10, y=70)
 def add():
     get_entry = enter_lb.get()
     x.append(get_entry)
 
-    x_lb = Label(x_frame, text="x = " + str(x), bg="white", fg="black")
-    x_lb.place(x=0, y=0)
+    x_lb.config(state="normal", fg="black")
+    x_lb.delete(0, END)
+    x_lb.insert(0, "x = " + str(x))
+    x_lb.config(state="readonly")
+    x_lb.place(x=10, y=70)
 
 
 def remove():
     x.pop()
 
-    x_lb2 = Label(x_frame, bg="white", width=40)
-    x_lb2.place(x=0, y=0)
+    x_lb.config(state="normal")
+    x_lb.delete(0, END)
+    x_lb.insert(0, "x = " + str(x))
+    x_lb.config(state="readonly", fg="dark gray")
+    x_lb.place(x=10, y=70)
 
-    x_lb3 = Label(x_frame, text="x = " + str(x), bg="white", fg="dark gray")
-    x_lb3.place(x=0, y=0)
 
 
 word2_lb = Label(p_frame, text="Put the elements line x:", bg="white", fg="#1F0058", font=ft.Font(size=10))
@@ -167,28 +172,29 @@ painter_but.place(x=200, y=300)
 # -----------------------------------------------------------------------------------------------
 
 
-y_frame = Frame(p_frame, bg="white", width=224, height=20)
-y_frame.place(x=10, y=150)
-
 y = []
 
-
+x2_lb = Entry(p_frame, bg="white", fg="black", state="readonly", font=("", 14))
+x2_lb.place(x=10, y=160)
 def add2():
-    get_entry = eval(entery_lb.get())
+    get_entry = entery_lb.get()
     y.append(get_entry)
 
-    x2_lb = Label(y_frame, text="y = " + str(y), bg="white", fg="black")
-    x2_lb.place(x=0, y=0)
+    x2_lb.config(state="normal")
+    x2_lb.delete(0, END)
+    x2_lb.insert(0, "y = " + str(y))
+    x2_lb.config(state="readonly")
+    x2_lb.place(x=10, y=160)
 
 
 def remove_y():
     y.pop()
 
-    y_lb2 = Label(y_frame, bg="white", width=40)
-    y_lb2.place(x=0, y=0)
-
-    y_lb3 = Label(y_frame, text="y = " + str(y), bg="white", fg="dark gray")
-    y_lb3.place(x=0, y=0)
+    x2_lb.config(state="normal")
+    x2_lb.delete(0, END)
+    x2_lb.insert(0, "y = " + str(y))
+    x2_lb.config(state="readonly")
+    x2_lb.place(x=10, y=160)
 
 
 word3_lb = Label(p_frame, text="Put the numbers line y:", bg="white", fg="#1F0058", font=ft.Font(size=10))
@@ -613,28 +619,33 @@ back_but.place(x=1195, y=0)
 p_frame1 = Frame(w_comp, bg="white", width=320, height=720)
 p_frame1.pack(side="left")
 
-x_frame1 = Frame(p_frame1, bg="white", width=224, height=20)
-x_frame1.place(x=10, y=60)
 
 x01 = []
 
-
+# x Entry in first frame
+x_lbc = Entry(p_frame1, bg="white", fg="black",state="readonly", font=("", 14))
+x_lbc.place(x=10, y=75)
 def addc():
     get_entryc = enter_lbc.get()
     x01.append(get_entryc)
 
-    x_lbc = Label(x_frame1, text="x = " + str(x01), bg="white", fg="black")
-    x_lbc.place(x=0, y=0)
+
+    x_lbc.config(state="normal", fg="black")
+    x_lbc.delete(0, END)
+    x_lbc.insert(0, "x = " + str(x01))
+    x_lbc.place(x=10, y=75)
+    x_lbc.config(state="readonly")
 
 
 def removec():
     x01.pop()
 
-    x_lb2c = Label(x_frame1, bg="white", width=40)
-    x_lb2c.place(x=0, y=0)
+    x_lbc.config(state="normal", fg="dark gray")
+    x_lbc.delete(0, END)
+    x_lbc.insert(0, "x = " + str(x01))
+    x_lbc.place(x=10, y=75)
+    x_lbc.config(state="readonly")
 
-    x_lb3c = Label(x_frame1, text="x = " + str(x01), bg="white", fg="dark gray")
-    x_lb3c.place(x=0, y=0)
 
 
 word2_lbc = Label(p_frame1, text="Put the elements line x:", bg="white", fg="#1F0058", font=ft.Font(size=10))
@@ -644,33 +655,37 @@ enter_lbc = Entry(p_frame1, font=ft.Font(size=14), bg="#1F0058", fg="white")
 enter_lbc.place(x=10, y=30)
 
 add_butc = Button(p_frame1, text="Add", bg="#8667BF", fg="white", width=4, command=addc)
-add_butc.place(x=270, y=30)
+add_butc.place(x=270, y=10)
 
 remove_butc = Button(p_frame1, text="Del", bg="#8667BF", fg="white", width=4, command=removec)
-remove_butc.place(x=270, y=60)
+remove_butc.place(x=270, y=40)
 
 y_framec = Frame(p_frame1, bg="white", width=224, height=20)
 y_framec.place(x=10, y=150)
 
 y01 = []
 
-
+x2_lbc = Entry(p_frame1, bg="white", fg="black", state="readonly", font=("", 14))
+x2_lbc.place(x=10, y=165)
 def add2c():
-    get_entryc = eval(entery_lbc.get())
+    get_entryc = entery_lbc.get()
     y01.append(get_entryc)
 
-    x2_lbc = Label(y_framec, text="y = " + str(y01), bg="white", fg="black")
-    x2_lbc.place(x=0, y=0)
+    x2_lbc.config(state="normal", fg="black")
+    x2_lbc.delete(0, END)
+    x2_lbc.insert(0, "y = " + str(y01))
+    x2_lbc.config(state="readonly")
+    x2_lbc.place(x=10, y=165)
 
 
 def remove_yc():
     y01.pop()
 
-    y_lb2c = Label(y_framec, bg="white", width=40)
-    y_lb2c.place(x=0, y=0)
-
-    y_lb3c = Label(y_framec, text="y = " + str(y01), bg="white", fg="dark gray")
-    y_lb3c.place(x=0, y=0)
+    x2_lbc.config(state="normal")
+    x2_lbc.delete(0, END)
+    x2_lbc.insert(0, "y = " + str(y01))
+    x2_lbc.config(state="readonly", fg="dark gray")
+    x2_lbc.place(x=10, y=165)
 
 
 word3_lbc = Label(p_frame1, text="Put the numbers line y:", bg="white", fg="#1F0058", font=ft.Font(size=10))
@@ -783,36 +798,38 @@ back_butc.place(x=1195, y=0)
 
 #photo3 = ImageTk.PhotoImage(image3_1)=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-draw_butc = Button(w_comp, text="Start Graphing!!", borderwidth=0, bg="#1F0058", command=drawc)
-draw_butc.place(x=700, y=300)
+draw_butc = Button(w_comp, text="Start Graphing!!", borderwidth=0, bg="#1F0058", command=drawc, background="white",font=("", 30))
+draw_butc.place(x=500, y=300)
 
 # frame 2 ==================================================================================================
 
 p_frame12 = Frame(w_comp, bg="white", width=320, height=720)
 p_frame12.pack(side="right")
 
-x_frame12 = Frame(p_frame1, bg="white", width=224, height=20)
-x_frame12.place(x=10, y=60)
-
 x012 = []
 
+x_lbc2 = Entry(p_frame12, bg="white", fg="black", state="readonly", font=("", 14))
+x_lbc2.place(x=10, y=75)
 
 def addc2():
     get_entryc2 = enter_lbc2.get()
     x012.append(get_entryc2)
 
-    x_lbc2 = Label(x_frame12, text="x = " + str(x01), bg="white", fg="black")
-    x_lbc2.place(x=0, y=0)
+    x_lbc2.config(state="normal", fg="black")
+    x_lbc2.delete(0, END)
+    x_lbc2.insert(0, "x = " + str(x012))
+    x_lbc2.config(state="readonly")
+    x_lbc2.place(x=10, y=75)
 
 
 def removec2():
     x012.pop()
 
-    x_lb2c2 = Label(x_frame12, bg="white", width=40)
-    x_lb2c2.place(x=0, y=0)
-
-    x_lb3c2 = Label(x_frame12, text="x = " + str(x01), bg="white", fg="dark gray")
-    x_lb3c2.place(x=0, y=0)
+    x_lbc2.config(state="normal", fg="dark gray")
+    x_lbc2.delete(0, END)
+    x_lbc2.insert(0, "x = " + str(x012))
+    x_lbc2.config(state="readonly")
+    x_lbc2.place(x=10, y=75)
 
 
 word2_lbc2 = Label(p_frame12, text="Put the elements line x:", bg="white", fg="#1F0058", font=ft.Font(size=10))
@@ -827,34 +844,40 @@ add_butc2.place(x=270, y=30)
 remove_butc2 = Button(p_frame12, text="Del", bg="#8667BF", fg="white", width=4, command=removec2)
 remove_butc2.place(x=270, y=60)
 
-y_framec2 = Frame(p_frame12, bg="white", width=224, height=20)
-y_framec2.place(x=10, y=150)
+
 
 y012 = []
 
+x2_lbc2 = Entry(p_frame12, bg="white", fg="black", font=("", 14), state="readonly")
+x2_lbc2.place(x=10, y=165)
+
 
 def add2c2():
-    get_entryc2 = eval(entery_lbc2.get())
+    get_entryc2 = entery_lbc2.get()
     y012.append(get_entryc2)
 
-    x2_lbc2 = Label(y_framec2, text="y = " + str(y01), bg="white", fg="black")
-    x2_lbc2.place(x=0, y=0)
+    x2_lbc2.config(state="normal", fg="black")
+    x2_lbc2.delete(0, END)
+    x2_lbc2.insert(0, "y = " + str(y012))
+    x2_lbc2.config(state="readonly")
+    x2_lbc2.place(x=10, y=165)
+
 
 
 def remove_yc2():
     y012.pop()
 
-    y_lb2c2 = Label(y_framec2, bg="white", width=40)
-    y_lb2c2.place(x=0, y=0)
-
-    y_lb3c2 = Label(y_framec2, text="y = " + str(y01), bg="white", fg="dark gray")
-    y_lb3c2.place(x=0, y=0)
+    x2_lbc2.config(state="normal", fg="dark gray")
+    x2_lbc2.delete(0, END)
+    x2_lbc2.insert(0, "y = " + str(y012))
+    x2_lbc2.config(state="readonly")
+    x2_lbc2.place(x=10, y=165)
 
 
 word3_lbc2 = Label(p_frame12, text="Put the numbers line y:", bg="white", fg="#1F0058", font=ft.Font(size=10))
 word3_lbc2.place(x=10, y=100)
 
-entery_lbc2 = Entry(w_comp, font=ft.Font(size=14), bg="#1F0058", fg="white")
+entery_lbc2 = Entry(p_frame12, font=ft.Font(size=14), bg="#1F0058", fg="white")
 entery_lbc2.place(x=10, y=120)
 
 add2_butc2 = Button(p_frame12, text="Add", bg="#8667BF", fg="white", width=4, command=add2c2)
@@ -961,7 +984,6 @@ back_butc.place(x=1195, y=0)
 
 #photo3 = ImageTk.PhotoImage(image3_1)=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-draw_butc = Button(w_comp, text="draw", borderwidth=0, bg="#1F0058", command=drawc)
-draw_butc.place(x=00, y=300)
+
 
 w_home.mainloop()

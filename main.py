@@ -10,7 +10,7 @@ import os
 w_home = Tk()
 w_home.geometry("1280x720")
 w_home.title("Graph painter")
-w_home.iconbitmap("D:/python projects/program first/images/icons8_stocks.ico")
+w_home.iconbitmap("D:/python projects/graph painter/images/icons8_stocks.ico")
 w_home.config(bg="#1F0058")
 w_home.resizable(False, False)
 
@@ -84,22 +84,22 @@ graph_lb = Label(wh_frame, text="Graph Painter!!", fg="#1F0058", bg="white", fon
 graph_lb.place(x=190, y=100)
 
 # image but1-----
-image1 = Image.open("D:/python projects/program first/images/graph_painter.png")
+image1 = Image.open("D:/python projects/graph painter/images/graph_painter.png")
 image1_1 = image1.resize((250, 125))
 
 photo1 = ImageTk.PhotoImage(image1_1)
 
 # image but2-----
-image2 = Image.open("D:/python projects/program first/images/excle_geaph.png")
+image2 = Image.open("D:/python projects/graph painter/images/excle_geaph.png")
 image2_1 = image2.resize((250, 125))
 
 photo2 = ImageTk.PhotoImage(image2_1)
 
-painter_but = Button(wh_frame, image=photo2, bg="white", borderwidth=0)
+painter_but = Button(wh_frame, text="print", bg="white", borderwidth=0)
 painter_but.place(x=200, y=450)
 
 # image but3------
-image4 = Image.open("D:/python projects/program first/images/chart4.png")
+image4 = Image.open("images/chart4.png")
 image4_1 = image4.resize((250, 125))
 
 photo8 = ImageTk.PhotoImage(image4_1)
@@ -117,7 +117,7 @@ w_painter = Toplevel()
 w_painter.geometry("1280x720")
 w_painter.title("Painter Graph")
 w_painter.state("withdrawn")
-w_painter.iconbitmap("D:/python projects/program first/images/icons8_stocks.ico")
+w_painter.iconbitmap("images/icons8_stocks.ico")
 w_painter.config(bg="#1F0058")
 w_painter.resizable(False, False)
 
@@ -310,7 +310,7 @@ w_excle = Toplevel()
 w_excle.geometry("1280x720")
 w_excle.title("Excle Painter")
 w_excle.state("withdrawn")
-w_excle.iconbitmap("D:/python projects/program first/images/icons8_stocks.ico")
+w_excle.iconbitmap("images/icons8_stocks.ico")
 w_excle.config(bg="#1F0058")
 w_excle.resizable(False, False)
 
@@ -408,7 +408,7 @@ lb_comb = Label(E_frame, text="Select the color", bg="white")
 lb_comb.place(x=960, y=300)
 
 # open excle folder button ---------
-image4 = Image.open("D:/python projects/program first/images/EXL.png")
+image4 = Image.open("images/EXL.png")
 image4_1 = image4.resize((250, 125))
 
 photo4 = ImageTk.PhotoImage(image4_1)
@@ -436,18 +436,18 @@ def print_Excle():
 
 
 # open excle folder button ---------
-image5 = Image.open("D:/python projects/program first/images/Draw_Graph2.png")
-image5_1 = image5.resize((250, 125))
+#image5 = Image.open("images/Draw_Graph2.png")=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/
+#image5_1 = image5.resize((250, 125)) =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-photo5 = ImageTk.PhotoImage(image5_1)
+#photo5 = ImageTk.PhotoImage(image5_1)=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-draw_but2 = Button(w_excle, image=photo5, borderwidth=0, command=print_Excle, bg="#1F0058")
+draw_but2 = Button(w_excle, text="Start Graph!!", borderwidth=0, command=print_Excle, bg="#1F0058", background="white",font=("", 30))
 draw_but2.place(x=520, y=60)
 
 # windo circle =================================================================================================================================================================================
 
 
-image6 = Image.open("D:/python projects/program first/images/circle_i.png")
+image6 = Image.open("images/circle_i.png")
 image6_1 = image6.resize((250, 125))
 
 photo6 = ImageTk.PhotoImage(image6_1)
@@ -458,10 +458,10 @@ w_circle.title("Circle Graph")
 w_circle.state("withdrawn")
 w_circle.config(bg="#1F0058")
 w_circle.resizable(False, False)
-w_circle.iconbitmap("D:/python projects/program first/images/icons8_stocks.ico")
+w_circle.iconbitmap("images/icons8_stocks.ico")
 
 # show windo circle but---------------------------------------------------------------------
-circle_but = Button(w_home, image=photo6, borderwidth=0, bg="#1F0058", command=show_circle)
+circle_but = Button(w_home, image= photo6, borderwidth=0, bg="#1F0058", command=show_circle)
 circle_but.place(x=210, y=300)
 # ------------------------------------------------------------------------------------------
 
@@ -589,7 +589,7 @@ def draw_pie():
 
 
 # draw pie chart folder ---------
-image7 = Image.open("D:/python projects/program first/images/pie_chart.png")
+image7 = Image.open("images/pie_chart.png")
 image7_1 = image7.resize((250, 125))
 
 photo7 = ImageTk.PhotoImage(image7_1)
@@ -602,7 +602,7 @@ w_comp = Toplevel()
 w_comp.geometry("1280x720")
 w_comp.title("Comparison Graph")
 w_comp.state("withdrawn")
-w_comp.iconbitmap("D:/python projects/program first/images/icons8_stocks.ico")
+w_comp.iconbitmap("images/icons8_stocks.ico")
 w_comp.config(bg="#1F0058")
 w_comp.resizable(False, False)
 
@@ -778,12 +778,12 @@ def drawc():
 back_butc = Button(w_comp, text="Back to home", bg="white", fg="#1F0058", command=show_home)
 back_butc.place(x=1195, y=0)
 
-image3c = Image.open("D:/python projects/program first/images/2graph-q.png")
-image3_1c = image3.resize((250, 125))
+#image3c = Image.open("images/2graph-q.png")=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
+#image3_1c = image3.resize((250, 125))=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-photo3 = ImageTk.PhotoImage(image3_1)
+#photo3 = ImageTk.PhotoImage(image3_1)=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-draw_butc = Button(w_comp, image=photo3, borderwidth=0, bg="#1F0058", command=drawc)
+draw_butc = Button(w_comp, text="Start Graphing!!", borderwidth=0, bg="#1F0058", command=drawc)
 draw_butc.place(x=700, y=300)
 
 # frame 2 ==================================================================================================
@@ -956,12 +956,12 @@ def drawc():
 back_butc = Button(w_comp, text="Back to home", bg="white", fg="#1F0058", command=show_home)
 back_butc.place(x=1195, y=0)
 
-image3c = Image.open("D:/python projects/program first/images/2graph-q.png")
-image3_1c = image3.resize((250, 125))
+#image3c = Image.open("D:/python projects/program first/images/2graph-q.png")=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
+#image3_1c = image3.resize((250, 125))=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-photo3 = ImageTk.PhotoImage(image3_1)
+#photo3 = ImageTk.PhotoImage(image3_1)=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=//=
 
-draw_butc = Button(w_comp, image=photo3, borderwidth=0, bg="#1F0058", command=drawc)
+draw_butc = Button(w_comp, text="draw", borderwidth=0, bg="#1F0058", command=drawc)
 draw_butc.place(x=00, y=300)
 
 w_home.mainloop()
